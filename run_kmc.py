@@ -12,6 +12,27 @@ X,Y = make_blobs(n_samples=400, centers=4,
 plt.scatter(X[:,0], X[:,1])
 plt.savefig('scatterplot.png')
 
+kmeans = KMeans(n_clusters=4)
+kmeans.fit(X)
+kmeans_results = kmeans.predict(X)
+
+print(kmeans_results)
+
+plt.scatter(X[:, 0], X[:, 1], c=kmeans_results)
+plt.savefig('scatterplot_color.png')
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
